@@ -1,0 +1,768 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+/*table of content*/
+
+/* ==============================================
+* Global
+1. Nav bar
+2. Slide show
+3. About
+4. Service
+5. Example
+6. Contact
+ ============================================== */
+
+/*table of content*/
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.navbar-nav .nav-link.active {
+    background: #f00 !important;
+}
+
+
+
+header {}
+
+section {
+    /*margin-top: 35px;*/
+}
+
+
+
+/*Responsive*/
+
+@media (min-width: 992px) {
+    header {}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+    /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 1.25dppx),
+(min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+.logo {
+    /*margin-top: -40px;*/
+}
+
+.sub_title {
+    font-size: 16px;
+    margin-bottom: -10px;
+    font-family: 'Dancing Script', cursive;
+    letter-spacing: 1.5px;
+
+}
+
+.item-content:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.item {
+    float: left;
+    padding: 8px 0px 50px 0px;
+    background-color: white;
+    color: #0b7963;
+    margin-right: 1px;
+    border-radius: 4px;
+    width: calc((100% - 2px)/2);
+    text-align: center;
+    position: relative;
+    margin-bottom: 50px;
+
+}
+
+.item:last-child {
+    margin-right: 0px;
+    margin-left: calc((100% - 2px)/4);
+    margin-bottom: 0px;
+}
+
+.price {
+    position: absolute;
+    top: 100%;
+    background-color: #0b7963;
+    color: white;
+    width: 80%;
+    text-align: center;
+    padding: 15px 0px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+
+}
+
+.price span {
+    font-size: 25px;
+}
+
+.position-relative {
+
+    position: relative !important;
+    width: 100%;
+    min-height: 550px;
+}
+
+.position-none {
+    position: none !important;
+}
+
+.banner {
+    position: absolute;
+    bottom: 0px;
+    left: 70px;
+    display: none;
+}
+
+.height {
+    min-height: 80px;
+    clear: both;
+}
+
+.text {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.opt {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 50%;
+    margin: auto;
+    padding: 5px 0px;
+}
+
+.domain {
+    background-color: white;
+    color: black;
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px 0px;
+    border-radius: 10px;
+    box-shadow: 0 1px 0 #000;
+}
+
+.icon {
+    height: 130px;
+
+}
+
+.main_text {
+    padding: 15px 20px;
+}
+
+
+
+section#pricing {
+     background: #9df2da;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #00b894, #55efc4, #9df2da);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #048964, #5ed3b2, #9be9d3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+section#pricing .price-item {
+    background: #fff;
+}
+
+section#pricing .price-item .body {}
+
+section#pricing .price-item .body .title {
+    padding: 15px 0px;
+    text-align: center;
+    background: #79f5ae;
+    color: #fff;
+
+}
+
+section#pricing .price-item .body .title h5 {
+    font-size: 20px;
+}
+
+section#pricing .price-item .body .title h6 {
+    font-size: 35px;
+}
+
+section#pricing .price-item .body ul {
+    padding: 0px;
+    list-style: none;
+
+}
+
+section#pricing .price-item .body ul li {
+    border-bottom: 1px solid #ccc;
+    padding: 12px 15px;
+    z-index: 99999;
+}
+
+section#pricing .price-item .body ul li:last-child {
+    border-bottom: none;
+}
+
+section#pricing .price-item .body ul li i {
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+#pricing .btn {
+    font-size: 25px;
+    border-radius: 10px;
+    letter-spacing: .1rem;
+    font-weight: bold;
+    padding: 1rem;
+    background-color: #2ed374;
+    color: white;
+    box-sizing: border-box;
+}
+
+.lef-margin {
+    margin-left: 0px;
+}
+
+@media (min-width: 768px) {
+
+    .item {
+        width: calc((100% - 2px)/3);
+        margin-bottom: 0px;
+    }
+    .item:last-child {
+        margin-left: 0px;
+        margin-bottom: 0px;
+    }
+}
+
+/* Hover Effects on Card */
+
+@media (min-width: 992px) {
+    .banner {
+        display: block;
+    }
+    .lef-margin {
+        margin-left: 24.99999%;
+    }
+}
+
+.offer {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+
+.title {
+    padding-top: 60px;
+    font-size: 30px;
+}
+
+.reg {
+    padding-top: 80px;
+}
+
+#DOCUMENT {
+    background-color: #d4e9eb;
+}
+
+.form {
+    padding: 20px 15px;
+    background-color: #f0e9e5;
+    border: none;
+    transition: all 0.2s;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.main_header {
+    background: #9df2da;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #00b894, #55efc4, #9df2da);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #048964, #5ed3b2, #9be9d3);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.company {
+    background-color: #9df1ce;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    color: white;
+}
+
+.company .c-title {
+    margin-bottom: 50px;
+}
+
+.company .row div {
+    margin-bottom: 25px;
+}
+
+.company img {
+    width: 100%;
+}
+
+.reg_form {
+    background-color: #ddf4f1;
+    padding: 5px 5px;
+    color: black;
+    min-height: 250px;
+    padding: 20px 15px;
+    border-radius: 8px;
+
+}
+
+.reg_form .btn {
+    background: #2ecc71;
+    padding: 10px 0px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 3px 0 #86e3ad;
+    position: relative;
+}
+
+.reg_form .btn i {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    float: right;
+    text-align: center;
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.reg_form .btn:hover {
+    background: #86e3ad;
+}
+
+.fill_form {
+    margin: 10px;
+    padding: 5px;
+
+}
+
+.main_header {
+    padding: 25px 0px;
+}
+
+.main_header p {
+    text-align: center;
+}
+
+.main_header span {
+    font-weight: 400;
+    font-size: 19px;
+}
+
+.main_header .number {
+    text-decoration: underline;
+}
+
+#contact {}
+
+#contact .img-con {
+    float: left;
+    width: 110px;
+    margin-right:15px;
+	height:110px;
+}
+#contact .img-con img{
+	  width: 110px;
+	  border-radius:50%;
+	  height:110px;
+}
+#contact .txt {
+    float: left;
+    width: calc(100% - 125px);
+}
+#step {
+    padding: 50px 0px;
+    /*    background: #ccc;*/
+}
+
+#step .step-title {
+    text-align: center;
+}
+
+#step .step-title h2 {
+    text-transform: uppercase;
+}
+
+#step .step-title p {
+    position: relative;
+}
+
+#step .step-title p:after {
+    position: absolute;
+    display: block;
+    content: "";
+    background: #008ace;
+    top: 120%;
+    height: 2px;
+    left: 50%;
+    width: 120px;
+    transform: translateX(-50%);
+}
+
+#step .step-body {}
+
+#step .step-body ul {
+    list-style: none;
+}
+
+@media (min-width: 992px) {
+    #step .step-body ul li {
+        padding: 18px 0 0 1px;
+        margin: 0 0 24px;
+        list-style: none;
+        background: url(../images/round_img.png) left top no-repeat;
+        height: auto;
+        float: left;
+        z-index: 1;
+         margin-bottom: 0px;
+    }
+
+    #step .step-body ul li:last-child {
+        width: 66px;
+        background: url(../images/round_img.png) left top no-repeat;
+    }
+
+    #step .step-body ul li:last-child:after {
+        background: 0 0;
+    }
+
+    #step .step-body ul li span {
+        text-align: center;
+        width: 60px;
+        display: block;
+        font-size: 16px;
+        color: #007fbd;
+        font-weight: 600;
+        margin-bottom: 0px;
+    }
+
+    #step .step-body ul li:after {
+        background: url(../images/strip1.png) left center repeat-x;
+        height: 10px;
+        display: block;
+        top: -15px;
+        z-index: -1;
+        content: " ";
+        display: block;
+        position: relative;
+    }
+
+    #step .step-body ul li div {
+        width: 235px;
+        margin-right: -2px;
+        border: 2px solid #008ace;
+        float: left;
+        left: -89px;
+        top: 35px;
+        position: relative;
+        text-align: center;
+    }
+
+    #step .step-body ul li div:before {
+        background: url(../images/arrow_top.png) left center repeat-x;
+        width: 16px;
+        height: 9px;
+        top: -9px;
+        left: 47%;
+        display: block;
+        content: "";
+        position: relative;
+    }
+}
+#form-top {
+    background: #00b894;
+    padding: 15px 0px 10px;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    display: none;
+}
+
+#form-top .btn {
+    background: #2ecc71;
+    padding: 6px 0px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    box-shadow: 0 3px 0 #86e3ad;
+}
+
+#form-top .btn:hover {
+    background: #86e3ad;
+}
+
